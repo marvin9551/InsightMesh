@@ -1,0 +1,14 @@
+schema_version: 1
+module_path: ""
+title: InsightMesh 智能调研平台前端原型
+scope:
+    - .gitignore
+    - README.md
+    - jsconfig.json
+    - next.config.mjs
+    - package-lock.json
+    - package.json
+    - src/
+source_files: []
+depends_on: []
+related_to: []

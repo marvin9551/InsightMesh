@@ -1,0 +1,21 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: Q0DeR-MaG1C-BrAnCh-Fo2-NoN-GiT-Or-No-C0MmIt
+exported_at: "2026-07-02T09:51:52Z"
+modules:
+    "":
+        dir_name: InsightMesh 智能调研平台前端原型
+        title: InsightMesh 智能调研平台前端原型
+        scope:
+            - .gitignore
+            - README.md
+            - jsconfig.json
+            - next.config.mjs
+            - package-lock.json
+            - package.json
+            - src/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

@@ -1,0 +1,17 @@
+{
+  "name": "insightmesh",
+  "version": "0.1.0",
+  "private": true,
+  "description": "InsightMesh — 多 AI Agent 智能调研平台 (Next.js prototype)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
