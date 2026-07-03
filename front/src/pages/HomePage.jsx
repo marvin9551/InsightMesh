@@ -1,8 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { useNavigate, Link } from "react-router-dom";
 import TopNav from "@/components/TopNav";
 
 const arrowRight = (
@@ -29,8 +26,8 @@ const trustLogos = ["ByteDance", "Meituan", "Ant Group", "MINISO", "Xiaomi", "SH
 
 function HeroInputZone({ placeholder }) {
   const [topic, setTopic] = useState("");
-  const router = useRouter();
-  const start = () => router.push("/create");
+  const navigate = useNavigate();
+  const start = () => navigate("/create");
   return (
     <div className="hero-input-zone animate-fade-in" style={{ animationDelay: "240ms" }}>
       <div className="hero-input-row">

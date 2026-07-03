@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const lockIcon = (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>);
 const perkCheck = (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>);
@@ -18,8 +18,8 @@ export default function PermissionStatePage() {
           <div className="perk">{perkCheck}支持 PDF / Word 多格式导出</div>
         </div>
         <div className="state-actions">
-          <Link className="btn btn-primary btn-lg" href="/login">登录 / 注册</Link>
-          <Link className="btn btn-outline btn-lg" href="/">返回首页</Link>
+          <Link className="btn btn-primary btn-lg" to="/login">登录 / 注册</Link>
+          <Link className="btn btn-outline btn-lg" to="/">返回首页</Link>
         </div>
       </div>
     </div>

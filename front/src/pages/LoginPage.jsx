@@ -1,8 +1,5 @@
-"use client";
-
 import { useState, useRef } from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { useNavigate, Link } from "react-router-dom";
 import LogoMark from "@/components/LogoMark";
 
 const backIcon = (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>);
@@ -16,7 +13,7 @@ const socialIcons = {
 };
 
 export default function LoginPage() {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [tab, setTab] = useState("login");
   const [showPw, setShowPw] = useState(false);
   const emailRef = useRef(null);
@@ -35,7 +32,7 @@ export default function LoginPage() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    router.push("/profile");
+    navigate("/profile");
   };
 
   return (
@@ -71,7 +68,7 @@ export default function LoginPage() {
       {/* Form panel */}
       <div className="login-form-wrap" data-od-id="login-form">
         <form className="login-form" noValidate onSubmit={onSubmit}>
-          <Link className="login-back" href="/">
+          <Link className="login-back" to="/">
             {backIcon}
             返回首页
           </Link>

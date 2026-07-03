@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import LogoMark from "./LogoMark";
 
 // Shared top navigation. `active` highlights the matching nav link
@@ -10,7 +10,7 @@ export default function TopNav({ active = null, ctaHref = "/create", ctaLabel = 
 
   const navLink = (href, label, key) => (
     <Link
-      href={href}
+      to={href}
       style={active === key ? { color: "var(--fg)" } : undefined}
     >
       {label}
@@ -20,7 +20,7 @@ export default function TopNav({ active = null, ctaHref = "/create", ctaLabel = 
   return (
     <header className="topnav">
       <div className="container topnav-inner">
-        <Link className="logo" href="/">
+        <Link className="logo" to="/">
           <LogoMark size={28} />
           InsightMesh
         </Link>
@@ -31,10 +31,10 @@ export default function TopNav({ active = null, ctaHref = "/create", ctaLabel = 
           {navLink("/profile", "我的报告", "profile")}
         </nav>
         <div className="topnav-actions">
-          <Link className="btn btn-ghost" href="/login">
+          <Link className="btn btn-ghost" to="/login">
             登录
           </Link>
-          <Link className="btn btn-primary" href={ctaHref}>
+          <Link className="btn btn-primary" to={ctaHref}>
             {ctaLabel}
           </Link>
         </div>

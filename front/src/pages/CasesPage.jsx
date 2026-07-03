@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import TopNav from "@/components/TopNav";
 
 const arrowRight = (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 5l7 7-7 7" /></svg>);
@@ -151,7 +149,7 @@ export default function CasesPage() {
         <div className="container">
           <div className="row-between">
             <span className="text-muted-2">© 2026 InsightMesh Inc.</span>
-            <Link href="/create" className="text-accent font-medium">开始你的调研 →</Link>
+            <Link to="/create" className="text-accent font-medium">开始你的调研 →</Link>
           </div>
         </div>
       </footer>

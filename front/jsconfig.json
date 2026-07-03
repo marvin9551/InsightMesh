@@ -4,10 +4,10 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "bundler"
   },
-  "include": ["src/**/*", "next.config.mjs"],
+  "include": ["src/**/*", "vite.config.js"],
   "exclude": ["node_modules"]
 }

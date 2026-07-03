@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useNavigate, Link } from "react-router-dom";
 import TopNav from "@/components/TopNav";
 
 const backIcon = (
@@ -43,7 +41,7 @@ const formats = [
 ];
 
 export default function CreatePage() {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [dims, setDims] = useState(() => Object.fromEntries(dimensions.map((d) => [d.id, d.defaultOn])));
   const [depth, setDepth] = useState("deep");
   const [fmts, setFmts] = useState(() => Object.fromEntries(formats.map((f) => [f.id, f.defaultOn])));
@@ -59,10 +57,10 @@ export default function CreatePage() {
       <TopNav ctaLabel="免费开始" />
 
       <main className="create-wrap" id="content">
-        <a className="create-back" href="/">
+        <Link className="create-back" to="/">
           {backIcon}
           返回首页
-        </a>
+        </Link>
 
         <h1 className="create-title">配置你的调研任务</h1>
         <p className="create-sub">已识别主题，请确认并选择调研维度、深度与输出格式。</p>
@@ -171,7 +169,7 @@ export default function CreatePage() {
           <div className="create-footer-info">
             预计耗时 <strong>{eta}</strong> · 输出 <strong>{activeFormats.join(" + ") || "—"}</strong>
           </div>
-          <button className="btn btn-primary btn-xl" onClick={() => router.push("/execution")}>
+          <button className="btn btn-primary btn-xl" onClick={() => navigate("/execution")}>
             开始生成任务
             {arrowRight}
           </button>

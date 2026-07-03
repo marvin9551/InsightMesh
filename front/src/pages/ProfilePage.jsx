@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import TopNav from "@/components/TopNav";
 
 const iconBookmark = (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /></svg>);
@@ -89,7 +87,7 @@ export default function ProfilePage() {
                   {n.badge && <span className="badge">{n.badge}</span>}
                 </a>
               ))}
-              <Link className="sidebar-link" href="/login">
+              <Link className="sidebar-link" to="/login">
                 {sidebarIcons.logout}
                 退出登录
               </Link>
@@ -157,7 +155,7 @@ export default function ProfilePage() {
                         {r.filled ? iconBookmarkFilled : iconBookmark}
                       </button>
                       {r.running ? (
-                        <Link className="btn-icon" href="/execution" title="查看进度">{iconClock}</Link>
+                        <Link className="btn-icon" to="/execution" title="查看进度">{iconClock}</Link>
                       ) : (
                         <button className="btn-icon" title="分享">{iconShare}</button>
                       )}

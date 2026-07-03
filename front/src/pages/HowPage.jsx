@@ -1,6 +1,5 @@
-"use client";
-
 import TopNav from "@/components/TopNav";
+import { Link } from "react-router-dom";
 
 const agentSpecs = [
   { num: "01", title: "信息采集 Agent", desc: "并行检索全网资讯、行业数据库、学术论文、社媒讨论，构建原始信息池。" },
@@ -49,12 +48,12 @@ export default function HowPage() {
                   </div>
                 ))}
               </div>
-              <a className="btn btn-outline" href="/execution" style={{ marginTop: "var(--sp-8)" }}>
+              <Link className="btn btn-outline" to="/execution" style={{ marginTop: "var(--sp-8)" }}>
                 看一次实时执行演示
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 16, height: 16 }}>
                   <path d="M5 12h14M13 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             <AgentViz />
@@ -66,12 +65,12 @@ export default function HowPage() {
       <section className="cta-band" data-od-id="cta">
         <h2 className="h-section">亲自体验多 Agent 协作调研</h2>
         <p className="lead">免费体验 3 次完整调研，无需信用卡。</p>
-        <a className="btn btn-primary btn-lg" href="/create">
+        <Link className="btn btn-primary btn-lg" to="/create">
           开始调研
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 16, height: 16 }}>
             <path d="M5 12h14M13 5l7 7-7 7" />
           </svg>
-        </a>
+        </Link>
       </section>
 
       {/* Footer */}

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import TopNav from "@/components/TopNav";
 
 const backIcon = (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>);
@@ -43,7 +43,7 @@ export default function ReportPage() {
         {/* Action bar */}
         <div className="report-actions" data-od-id="actions">
           <div className="report-actions-left">
-            <Link className="btn btn-outline" href="/execution">
+            <Link className="btn btn-outline" to="/execution">
               {backIcon}
               返回执行页
             </Link>
@@ -52,7 +52,7 @@ export default function ReportPage() {
           </div>
           <div className="report-actions-right">
             <button className="btn btn-outline">{shareIcon}分享报告</button>
-            <Link className="btn btn-primary" href="/create">{refreshIcon}重新调研</Link>
+            <Link className="btn btn-primary" to="/create">{refreshIcon}重新调研</Link>
           </div>
         </div>
 
@@ -240,7 +240,7 @@ export default function ReportPage() {
         <div className="container">
           <div className="row-between">
             <span className="text-muted-2">由 InsightMesh 多 Agent 系统自动生成 · 2026 年 7 月 2 日</span>
-            <Link href="/create" className="text-accent font-medium">开始新一轮调研 →</Link>
+            <Link to="/create" className="text-accent font-medium">开始新一轮调研 →</Link>
           </div>
         </div>
       </footer>

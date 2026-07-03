@@ -1,6 +1,5 @@
-"use client";
-
 import TopNav from "@/components/TopNav";
+import { Link } from "react-router-dom";
 
 const features = [
   { icon: "blue", title: "全网深度采集", desc: "同时检索 200+ 数据源——资讯、论文、社媒、行业数据库，构建覆盖全面的原始信息池。" },
@@ -60,12 +59,12 @@ export default function FeaturesPage() {
       <section className="cta-band" data-od-id="cta">
         <h2 className="h-section">准备好体验智能调研了吗？</h2>
         <p className="lead">免费体验 3 次完整调研，无需信用卡。</p>
-        <a className="btn btn-primary btn-lg" href="/create">
+        <Link className="btn btn-primary btn-lg" to="/create">
           开始调研
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 16, height: 16 }}>
             <path d="M5 12h14M13 5l7 7-7 7" />
           </svg>
-        </a>
+        </Link>
       </section>
 
       {/* Footer */}
